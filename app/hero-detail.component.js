@@ -27,6 +27,10 @@ var HeroDetailComponent = (function () {
     HeroDetailComponent.prototype.goBack = function () {
         window.history.back();
     };
+    HeroDetailComponent.prototype.save = function () {
+        this.heroService.update(this.hero)
+            .then(this.goBack);
+    };
     HeroDetailComponent = __decorate([
         core_1.Component({
             selector: 'my-hero-detail',
